@@ -1,20 +1,24 @@
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <nav className="container flex justify-between items-center py-8 font-Poppins">
+      <div className="flex items-center space-x-10">
         <div>
           <img src="/logo.svg" alt="Shortly" />
         </div>
-        <ul>
-          <li>Features</li>
-          <li>Blog</li>
-          <li>Resources</li>
+        <ul className="flex items-center space-x-5 font-semibold text-Grey hover:cursor-pointer">
+          <li className="hover:text-black">Features</li>
+          <li className="hover:text-black">Blog</li>
+          <li className="hover:text-black">Resources</li>
         </ul>
       </div>
 
-      <div>
-        <button>Login</button>
-        <button>Sign Up</button>
+      <div className="flex items-center space-x-10">
+        <button className="font-semibold text-Grey hover:text-black">
+          Login
+        </button>
+        <button className="font-semibold bg-Cyan text-white px-5 py-2 rounded-full hover:bg-cyan-200">
+          Sign Up
+        </button>
       </div>
     </nav>
   );
