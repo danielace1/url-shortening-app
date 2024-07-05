@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="container flex justify-between items-center py-8 font-Poppins">
+    <nav className="container flex justify-between items-center px-20 py-8 font-Poppins">
       <div className="flex items-center space-x-10">
         <div>
           <img src="/logo.svg" alt="Shortly" />
@@ -16,7 +16,7 @@ const Navbar = () => {
         <button className="font-semibold text-Grey hover:text-black">
           Login
         </button>
-        <button className="font-semibold bg-Cyan text-white px-5 py-2 rounded-full hover:bg-cyan-200">
+        <button className="font-semibold bg-Cyan text-white px-5 py-1.5 rounded-full hover:bg-cyan-200">
           Sign Up
         </button>
       </div>

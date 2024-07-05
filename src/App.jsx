@@ -1,4 +1,5 @@
-import HomePage from "./components/Pages/HomePage";
+import HomePage from "./Pages/HomePage";
+import Footer from "./components/TheFooter";
 import Navbar from "./components/TheNavbar";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <Navbar />
       <HomePage />
+      <Footer />
     </div>
   );
 };
