@@ -1,3 +1,4 @@
+import Links from "../components/Links";
 import SearchBox from "../components/SearchBox";
 
 const HomePage = () => {
@@ -27,13 +28,18 @@ const HomePage = () => {
       </div>
 
       {/* Advanced statistics  */}
-      <div className="relative bg-gray-100 pt-16 px-20 pb-32">
-        <div className="flex justify-center items-center">
+      <div className="relative bg-gray-100 pt-16 pb-32">
+        <div className="flex flex-col justify-center items-center">
           {/* Search box */}
           <div className="container absolute -top-16 w-full">
             <SearchBox />
           </div>
+
+          <div className="container space-y-3">
+            <Links />
+          </div>
         </div>
+
         <div className="mt-16 text-center">
           <h1 className="text-4xl font-bold mb-2">Advanced Statistics</h1>
           <p className="text-GreyishViolet font-semibold">
@@ -43,7 +49,7 @@ const HomePage = () => {
         </div>
 
         {/* Cards */}
-        <div className="container mt-14 flex gap-x-10">
+        <div className="container px-20  mt-14 flex gap-x-10">
           <span className="absolute bottom-72 left-[450px] 2xl:left-[910px] w-96 h-2 bg-Cyan"></span>
 
           <div className="relative px-10 py-16 h-60 bg-white rounded z-10">

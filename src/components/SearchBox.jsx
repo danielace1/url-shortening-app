@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useState } from "react";
 
 const Schema = z.object({
   search: z.string().url({ message: "Please add a valid link" }),
 });
 
 const SearchBox = () => {
+  const [link, setLink] = useState();
+
   const {
     register,
     handleSubmit,
@@ -14,12 +17,14 @@ const SearchBox = () => {
     reset,
   } = useForm({ resolver: zodResolver(Schema) });
 
-  const submitform = (e) => {
+  const submitform = async (e) => {
     console.log(e);
+
     reset();
   };
+
   return (
-    <div className="mx-72 bg-[url('/bg-shorten-desktop.svg')] bg-no-repeat bg-cover rounded-lg">
+    <div className="mx-40 2xl:mx-72 bg-[url('/bg-shorten-desktop.svg')] bg-no-repeat bg-cover rounded-lg">
       <form
         onSubmit={handleSubmit(submitform)}
         className="bg-DarkViolet bg-opacity-80 px-12 py-10 h-32 rounded-lg"
@@ -30,6 +35,7 @@ const SearchBox = () => {
             name="search"
             id="search"
             placeholder="Shorten a link here..."
+            onChange={link}
             className={`px-5 py-2.5  outline-none rounded-md w-5/6 focus:border-2   ${
               errors?.search ? "border  border-red-400" : "focus:border-Grey"
             }`}
