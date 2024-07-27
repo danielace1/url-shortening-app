@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="py-16 bg-VeryDarkViolet">
-      <div className="container px-20 flex space-x-48">
-        <div className="w-1/6">
+    <footer className="py-12 lg:py-16 bg-VeryDarkViolet">
+      <div className="container px-9 lg:px-14 xl:px-20 lg:flex lg:space-x-32">
+        <div className="w-28 md:w-1/6 mx-auto md:mx-0">
           <img src="/logo-white.svg" alt="shortly" className="text-white" />
         </div>
 
-        <div className="grid grid-cols-4 gap-x-20">
+        <div className="mt-8 md:mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-y-0 md:gap-x-20 text-center md:text-left">
           <div>
             <h1 className="font-bold text-white mb-3">Features</h1>
             <ul className="font-semibold text-Grey space-y-1.5">
@@ -33,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex space-x-4">
+          <div className="flex justify-center md:justify-start space-x-6 md:space-x-4 hover:cursor-pointer">
             <div>
               <img src="/icon-facebook.svg" alt="facebook" />
             </div>
