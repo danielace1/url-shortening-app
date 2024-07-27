@@ -66,10 +66,10 @@ const Navbar = () => {
 
         <div
           id="dropdown"
-          className={`fixed md:relative flex-1 md:ml-8 lg:ml-14 xl:ml-20 top-16 md:top-0.5 left-6 md:left-0 w-96 md:w-auto h-72 md:h-auto px-5 sm:px-0 py-8 sm:py-0 bg-DarkViolet md:bg-transparent z-50 transform ${
+          className={`fixed md:relative flex-1 md:ml-8 lg:ml-14 xl:ml-20 top-16 md:top-0.5 left-1/2 -translate-x-1/2 md:left-0 w-96 md:w-auto h-72 md:h-auto px-5 sm:px-0 py-8 sm:py-0 bg-DarkViolet md:bg-transparent z-50 transform ${
             isOpen
-              ? "opacity-100 translate-y-0 block"
-              : "opacity-0 -translate-y-5 hidden"
+              ? "opacity-100 translate-y-0 visible md:invisible"
+              : "opacity-0 -translate-y-5 invisible md:visible"
           }  transition-all duration-300 ease-in-out rounded-lg md:transform-none md:opacity-100 md:translate-y-0 md:flex md:items-center md:space-x-10`}
         >
           <div className="flex flex-col md:flex-row divide-y divide-GreyishViolet divide-opacity-40 md:divide-y-0 md:items-center md:justify-between h-full md:h-auto w-full md:w-auto">

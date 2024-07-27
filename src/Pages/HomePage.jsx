@@ -16,7 +16,7 @@ const HomePage = () => {
               insights on how your links are performing.
             </p>
 
-            <button className="px-6 lg:px-9 py-2 lg:py-2.5 text-white lg:text-lg bg-Cyan hover:bg-cyan-200 font-semibold rounded-full">
+            <button className="px-10 md:px-6 lg:px-9 py-2 lg:py-2.5 text-white lg:text-lg bg-Cyan hover:bg-cyan-200 font-semibold rounded-full">
               Get Started
             </button>
           </div>
@@ -51,11 +51,12 @@ const HomePage = () => {
         </div>
 
         {/* Cards */}
-        <div className="container px-9 lg:px-14 xl:px-20 mt-20 md:mt-14 md:flex md:gap-x-10">
-          <span className="absolute top-[520px] md:bottom-72 left-[200px] md:left-[450px] 2xl:left-[910px] w-2 md:w-64 lg:w-96 h-72 md:h-2 bg-Cyan"></span>
+        <div className="relative container px-9 lg:px-14 xl:px-20 mt-20 md:mt-14 md:flex md:gap-x-10">
+          {/* Stick */}
+          <span className="absolute top-0 left-1/2 transform -translate-x-1/2 md:top-40 md:left-auto md:translate-x-0 md:transform-none w-2 h-full bg-Cyan -z-0 md:h-2 md:w-[calc(100%-33%)]"></span>
 
-          <div className="relative px-7 xl:px-10 py-14 xl:py-16 h-[250px] md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
-            <div className="absolute -top-10 left-32 md:left-6 bg-DarkViolet p-5 rounded-full">
+          <div className="relative px-7 xl:px-10 pt-14 pb-10 xl:py-16 h-auto md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 md:left-20 bg-DarkViolet p-5 rounded-full">
               <img
                 src="/icon-brand-recognition.svg"
                 alt="brand recognition"
@@ -74,8 +75,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="relative mt-20 md:mt-14 px-7 xl:px-10 py-14 xl:py-16 h-[250px] md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
-            <div className="absolute -top-10 left-32 md:left-6 bg-DarkViolet p-5 rounded-full">
+          <div className="relative mt-20 md:mt-14 px-7 xl:px-10 pt-14 pb-10 xl:py-16 h-auto md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
+            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 md:left-20 bg-DarkViolet p-5 rounded-full">
               <img
                 src="/icon-detailed-records.svg"
                 alt="brand recognition"
@@ -94,10 +95,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <span className="absolute top-[1000px] md:top-[520px] md:bottom-72 right-[210px] md:right-[450px] 2xl:right-[910px] w-2 md:w-64 lg:w-96 h-72 md:h-2  bg-Cyan"></span>
-
-          <div className="relative mt-20 md:mt-28 px-7 xl:px-10 py-14 xl:py-16 h-[250px] md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
-            <div className="absolute -top-10 left-32 md:left-6 bg-DarkViolet p-5 rounded-full">
+          <div className="relative mt-20 md:mt-28 px-7 xl:px-10 pt-14 pb-10 xl:py-16 h-auto md:h-[375px] lg:h-72 xl:h-60 bg-white rounded z-10">
+            <div className="absolute -top-10  left-1/2 transform -translate-x-1/2 md:left-20 bg-DarkViolet p-5 rounded-full">
               <img
                 src="/icon-fully-customizable.svg"
                 alt="brand recognition"
@@ -123,7 +122,7 @@ const HomePage = () => {
           <h1 className="text-3xl lg:text-4xl text-white font-bold mb-5">
             Boost your links today
           </h1>
-          <button className="px-6 lg:px-8 py-2 lg:py-2.5 text-white lg:text-lg bg-Cyan hover:bg-cyan-200 font-semibold rounded-full">
+          <button className="px-10 md:px-6 lg:px-8 py-2 lg:py-2.5 text-white lg:text-lg bg-Cyan hover:bg-cyan-200 font-semibold rounded-full">
             Get Started
           </button>
         </div>
