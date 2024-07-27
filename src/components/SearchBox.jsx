@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import axios from "axios";
+import { useUrls } from "../useContext/useContext";
 
 const Schema = z.object({
   search: z.string().url({ message: "Please add a valid link" }),
@@ -18,35 +19,42 @@ const SearchBox = () => {
     reset,
   } = useForm({ resolver: zodResolver(Schema) });
 
+  const { addUrl } = useUrls();
+
   const inputLink = (e) => {
     const url = e.target.value;
 
     setLink(url);
   };
 
-  const createShortUrl = async (link) => {
-    const inputBody = {
-      url: link,
-      expiry: "never",
-    };
-    const headers = {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      RetryAfter: 3600,
-      "x-api-key": "sk_3137366962bf414dbbfa9ac550f6317d",
+  const API_KEY = import.meta.env.VITE_RAPID_API_KEY;
+
+  const createShortUrl = async (url) => {
+    // Create FormData with the provided URL
+    const formData = new FormData();
+    formData.append("url", url.search);
+
+    const options = {
+      method: "POST",
+      url: "https://url-shortener-service.p.rapidapi.com/shorten",
+      headers: {
+        "x-rapidapi-key": API_KEY,
+        "x-rapidapi-host": "url-shortener-service.p.rapidapi.com",
+      },
+      data: formData,
     };
 
     try {
-      const response = await axios.post(
-        "https://api.manyapis.com/v1-create-short-url",
-        inputBody,
-        { headers }
-      );
-      console.log(response.data);
+      const response = await axios.request(options);
+      const shortenedUrl = response.data.result_url;
+
+      addUrl(url.search, shortenedUrl);
+
+      reset();
+      return response.data;
     } catch (error) {
-      console.error("Error creating short URL:", error);
+      console.error("Error:", error);
     }
-    reset();
   };
 
   return (
@@ -84,8 +92,6 @@ const SearchBox = () => {
           </small>
         )}
       </form>
-
-      {link}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,6 +6,20 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenuOnScroll = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", closeMenuOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", closeMenuOnScroll);
+    };
+  }, [isOpen]);
 
   return (
     <>
