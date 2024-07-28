@@ -27,7 +27,7 @@ const Links = () => {
             key={index}
             className="mx-5 md:mx-10 lg:mx-20 xl:mx-40 2xl:mx-72 mt-14 md:mt-3 xl:mt-7 bg-white p-4 lg:px-5 lg:py-4 rounded-md"
           >
-            <div className="flex-col lg:flex-row lg:flex justify-between items-center">
+            <div className="overflow-x-auto lg:flex-row lg:flex md:justify-between md:items-center">
               <div className="">
                 <h5 className="font-semibold">{link.originalUrl}</h5>
               </div>

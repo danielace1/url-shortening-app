@@ -40,13 +40,13 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="px-2.5 mt-14 xl:mt-16 text-nowrap md:text-wrap text-center">
+        <div className="px-2.5 mt-14 xl:mt-16 max-w-md mx-auto text-center">
           <h1 className="text-3xl lg:text-4xl font-bold mb-2">
             Advanced Statistics
           </h1>
           <p className="text-GreyishViolet font-semibold">
-            Track how your links are performing across the web with <br /> our
-            advanced statistics dashboard.
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
           </p>
         </div>
 
